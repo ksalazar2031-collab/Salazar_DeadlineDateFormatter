@@ -1,1 +1,21 @@
 
+import calendar
+
+eventtitle = input("Enter event title: ")
+year = int(input("Enter year: "))
+month = int(input("Enter month (1-12): "))
+day = int(input("Enter day: "))
+
+real_event = eventtitle.strip().upper()
+month_name = calendar.month_name[month]
+weekday_num = calendar.weekday(year, month, day)
+weekday = calendar.day_name[weekday_num]
+fulldate = f"{month_name[:3]} {day} {year}"
+
+print("\nFormatted Output:")
+print("Date:", fulldate)
+print("Event:", real_event)
+print("Year:", year)
+print("Month:", month_name)
+print("Day:", day)
+print("Weekday:", weekday)
